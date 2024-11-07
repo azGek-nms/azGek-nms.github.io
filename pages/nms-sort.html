@@ -1,0 +1,33 @@
+<div class="beforeArea">
+	<div class="notice">
+		<p>* <span class="highlight">클립보드 권한</span> 관련 경고창이 뜨면 <span class="highlight">'허용'</span>을 클릭해 주세요.</p>
+		<p>* 처음 사용이시면 메인 페이지의 <span class="highlight">세이브 에디터 가이드</span>를 확인하세요.</p>
+		<p>* 세이브에디터 사용전에 반드시 <span class="highlight">세이브 디렉토리를 백업</span>하세요.</p>
+		<p>* BaseContext JSON 값 전체를 복사한 후 붙여넣기 버튼을 클릭하세요.</p>
+		<p>* 플레이 데이터가 많을경우 복사한 값이 매우 많아 브라우저가 다운될 수 있습니다. 브라우저나 탭을 여러개 실행하지 마시고 진행해 주세요.</p>
+	</div>
+	<div class="btn-group">
+		<button class="parse btn-gradient cyan mini">붙여널기</button>
+		<button class="reset btn-gradient orange mini">리셋</button>
+	</div>
+</div>
+
+<div class="afterArea">
+	<div class="notice">
+		<p>* 리스트에서 <span class="highlight">드래그앤드롭</span>으로 순서를 변경하고 생성 버튼을 클릭하세요.</p>
+		<p>* 복사하기 버튼을 클릭하고 원래의 BaseContext 전체에 덮어쓰고 저장하세요.</p>
+		<p>* 게임 실행 후 문제가 발생할 경우 백업 파일로 세이브 디렉토리를 덮어쓰기 하세요.</p>
+	</div>
+	<div class="listArea">
+		<div class="list">
+			<ul id="sortable"></ul>
+		</div>
+		<div class="btn-group">
+			<button class="generate btn-gradient orange mini" disabled>생성</button>
+			<button class="copy btn-gradient cyan mini" disabled>복사하기</button>
+		</div>
+	</div>
+</div>
+
+<link href="./css/nms-sort.css" rel="stylesheet">
+<script src="./js/nms-sort.js"></script>

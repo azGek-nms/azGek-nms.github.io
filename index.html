@@ -1,84 +1,126 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>반응형 카드 레이아웃</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f0f0f0;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.2s;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-        }
-
-        .card h3 {
-            margin-bottom: 10px;
-            font-size: 1.2em;
-        }
-
-        .card p {
-            font-size: 0.9em;
-            color: #666;
-        }
-
-        /* 반응형 설정 */
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-        }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>azGek - No Man's Sky</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+	<link href="./css/jquery-ui-1.14.1.min.css" rel="stylesheet">
+	<link href="./css/swiper-4.4.6.min.css" rel="stylesheet">
+	<link href="./css/yt-swiper.css" rel="stylesheet">
+	<link href="./css/main.css" rel="stylesheet">
+	<script src="./js/jquery-3.7.1.min.js"></script>
+	<script src="./js/jquery-ui-1.14.1.min.js"></script>
+	<script src="./js/swiper-4.4.6.min.js"></script>
+	<script src="./js/yt-swiper.js"></script>
+	<script src="./js/main.js"></script>
 </head>
+
 <body>
-    <div class="container">
-        <div class="card">
-            <h3>카드 제목 1</h3>
-            <p>카드 내용이 여기에 표시됩니다.</p>
-        </div>
-        <div class="card">
-            <h3>카드 제목 2</h3>
-            <p>카드 내용이 여기에 표시됩니다.</p>
-        </div>
-        <div class="card">
-            <h3>카드 제목 3</h3>
-            <p>카드 내용이 여기에 표시됩니다.</p>
-        </div>
-        <div class="card">
-            <h3>카드 제목 4</h3>
-            <p>카드 내용이 여기에 표시됩니다.</p>
-        </div>
-        <!-- 필요한 만큼 카드 추가 -->
-    </div>
+
+	<header>
+		<div class="logo">
+			<img src="./images/azGek-pages-logo.png" style="width: auto; height: 100%;">
+		</div>
+		<nav class="menu">
+			<a href="mailto:﻿"azgek@naver.com">이메일</a>
+			<a href="https://www.youtube.com/@%EC%95%84%EC%A6%88%EA%B2%8D">유튜브채널</a>
+		</nav>
+	</header>
+
+	<main class="container">
+
+		<div id="content-page" class="dialog">
+			<div class="tb">
+				<div class="inner">
+					<div class="top">
+						<div class="title"></div>
+						<a href="#" class="close">✖</a>
+					</div>
+					<div class="ct"></div>
+				</div>
+			</div>
+		</div>
+
+		<div id="loading" class="loading-wrap">
+			<div class="loading">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+
+		<section id="contents" class="section content-section">
+			<div class="card" data-id="save-editor" data-title="세이브에디터 가이드">
+				<h2>세이브에디터 가이드</h2>
+				<p>세이브에디터 다운로드<br>Raw JSON 접근 및 헬퍼에 사용법<br>결과 저장 방법</p>
+				<div class="detail">
+					<img src="./images/nms-save-editor.png">
+				</div>
+			</div>
+
+			<div class="card" data-id="nms-sort" data-val="base" data-title="기지 순서 변경 헬퍼">
+				<h2>기지 순서 변경 헬퍼</h2>
+				<p>세이브에디터 필수<br>UI를 통해 기지 순서를 변경하고<br>JSON 결과를 생성</p>
+				<div class="detail">
+					<img src="./images/nms-base.png">
+				</div>
+			</div>
+
+			<div class="card" data-id="nms-sort" data-val="ship" data-title="함선 순서 변경 헬퍼">
+				<h2>함선 순서 변경 헬퍼</h2>
+				<p>세이브에디터 필수<br>UI를 통해 함선 순서를 변경하고<br>JSON 결과를 생성<br>철제독수리, 커스텀함선 등 외형 그대로 순서변경 가능</p>
+				<div class="detail">
+					<img src="./images/nms-starship.png">
+				</div>
+			</div>
+		</section>
+
+		<section id="yt-channel" class="section info-section">
+			<img src="./images/nms-icon-250x357.png" class="icon">
+			<h2>아즈겍(azGek)의 유튜브 채널</h2>
+			<p>노맨즈스카이(No Man's Sky) 관련 영상을 업로드 예정입니다.</p>
+			<div class="detail" style="max-width: 430px;">
+				<img src="./images/azgek-youtube.jpg" class="link" data-val="https://www.youtube.com/@%EC%95%84%EC%A6%88%EA%B2%8D">
+			</div>
+		</section>
+
+		<section id="yt-video" class="section info-section">
+			<img src="./images/nms-icon-250x357.png" class="icon">
+			<h2>노맨즈스카이 게임플레이 트레일러(팬메이드)</h2>
+			<p>직접 제작한 노맨즈스카이 게임플레이 트레일러입니다.</p>
+
+			<div class="detail">
+				<div class="wrap">
+					<div class="wrap-inner">
+
+						<div class="swiper-outter">
+							<div id="video-swiper" class="swiper-container">
+								<div class="swiper-wrapper">
+
+									<div class="swiper-slide">
+										<div class="video-container">
+											<div class="yt-player" data-id="ysxZJQfKZfs"></div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-pagination"></div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
 </body>
+
 </html>
