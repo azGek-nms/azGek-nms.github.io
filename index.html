@@ -14,6 +14,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>azGek - No Man's Sky</title>
+	<meta name="Keywords" content="No Man's Sky, editor, editor helper, 노맨즈스카이, 에디터">
+	<meta name="Description" content="Easily change the order of your No Man's Sky bases/starships/multi-tools/companions(requires the Save Editor, but the UI does JSON modifications automatically). 노맨즈스카이 기지/함선/멀티툴/반려동물 순서를 쉽게 변경하세요(세이브 에디터가 필요하지만 UI를 통해 JSON을 자동 수정함).">
+	<meta name="author" content="azGek">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
@@ -35,8 +38,8 @@
 			<img src="./images/azGek-pages-logo.png" style="width: auto; height: 100%;">
 		</div>
 		<nav class="menu">
-			<a href="mailto:﻿"azgek@naver.com">이메일</a>
-			<a href="https://www.youtube.com/@%EC%95%84%EC%A6%88%EA%B2%8D">유튜브채널</a>
+			<a href="#" class="page" data-id="release-note" data-title="Release Note">RELEASE-NOTE</a>
+			<a href="#" class="page" data-id="about" data-title="About">ABOUT</a>
 		</nav>
 	</header>
 
@@ -46,8 +49,8 @@
 			<div class="tb">
 				<div class="inner">
 					<div class="top">
-						<div class="title"></div>
-						<a href="#" class="close">✖</a>
+						<div><h2 class="title"></h2></div>
+						<h2 class="close">✖</h2>
 					</div>
 					<div class="ct"></div>
 				</div>
@@ -63,27 +66,64 @@
 		</div>
 
 		<section id="contents" class="section content-section">
-			<div class="card" data-id="save-editor" data-title="세이브에디터 가이드">
-				<h2>세이브에디터 가이드</h2>
-				<p>세이브에디터 다운로드<br>Raw JSON 접근 및 헬퍼에 사용법<br>결과 저장 방법</p>
+			<div class="page card" data-id="save-editor" data-title="세이브 에디터 가이드">
+				<h2>세이브 에디터 가이드</h2>
+				<div class="descript">
+					<p>세이브 에디터 다운로드</p>
+					<p>Raw JSON 접근 및 헬퍼에 사용법</p>
+					<p>결과 저장 방법</p>
+				</div>
 				<div class="detail">
 					<img src="./images/nms-save-editor.png">
 				</div>
 			</div>
 
-			<div class="card" data-id="nms-sort" data-val="base" data-title="기지 순서 변경 헬퍼">
+			<div class="page card" data-id="nms-sort" data-val="base" data-title="기지 순서 변경 헬퍼">
 				<h2>기지 순서 변경 헬퍼</h2>
-				<p>세이브에디터 필수<br>UI를 통해 기지 순서를 변경하고<br>JSON 결과를 생성</p>
+				<div class="descript">
+					<p>세이브 에디터 필수</p>
+					<p>UI를 통해 기지 순서를 변경</p>
+					<p>자동 JSON 결과 생성</p>
+				</div>
 				<div class="detail">
 					<img src="./images/nms-base.png">
 				</div>
 			</div>
 
-			<div class="card" data-id="nms-sort" data-val="ship" data-title="함선 순서 변경 헬퍼">
+			<div class="page card" data-id="nms-sort" data-val="ship" data-title="함선 순서 변경 헬퍼">
 				<h2>함선 순서 변경 헬퍼</h2>
-				<p>세이브에디터 필수<br>UI를 통해 함선 순서를 변경하고<br>JSON 결과를 생성<br>철제독수리, 커스텀함선 등 외형 그대로 순서변경 가능</p>
+				<div class="descript">
+					<p>세이브 에디터 필수</p>
+					<p>UI를 통해 함선 순서를 변경</p>
+					<p>자동 JSON 결과 생성</p>
+					<p>철제 독수리, 커스텀 함선 등 외형 그대로 순서 변경 가능</p>
+				</div>
 				<div class="detail">
 					<img src="./images/nms-starship.png">
+				</div>
+			</div>
+
+			<div class="page card" data-id="nms-sort" data-val="multitool" data-title="멀티툴 순서 변경 헬퍼">
+				<h2>멀티툴 순서 변경 헬퍼</h2>
+				<div class="descript">
+					<p>세이브 에디터 필수</p>
+					<p>UI를 통해 멀티툴 순서를 변경</p>
+					<p>자동 JSON 결과 생성</p>
+				</div>
+				<div class="detail">
+					<img src="./images/nms-multitool.png">
+				</div>
+			</div>
+
+			<div class="page card" data-id="nms-sort" data-val="pet" data-title="반려동물 순서 변경 헬퍼">
+				<h2>반려동물 순서 변경 헬퍼</h2>
+				<div class="descript">
+					<p>세이브 에디터 필수</p>
+					<p>UI를 통해 반려동물 순서를 변경</p>
+					<p>자동 JSON 결과 생성</p>
+				</div>
+				<div class="detail">
+					<img src="./images/nms-pet.png">
 				</div>
 			</div>
 		</section>
