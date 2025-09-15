@@ -1,0 +1,325 @@
+.btn-gradient {
+	margin: 5px;
+}
+
+a[class*="btn"] {
+	text-decoration: none;
+}
+
+input[class*="btn"], button[class*="btn"] {
+	border: 0;
+}
+
+.btn-gradient.mini {
+	padding: 4px 12px;
+	font-size: 1.2rem;
+}
+
+.btn-gradient {
+	text-decoration: none;
+	color: white;
+	padding: 10px 30px;
+	display: inline-block;
+	position: relative;
+	border: 1px solid rgba(0, 0, 0, 0.21);
+	border-bottom: 4px solid rgba(0, 0, 0, 0.21);
+	border-radius: 4px;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+}
+
+.btn-gradient.cyan {
+	background: rgba(27, 188, 194, 1);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(27, 188, 194, 1)),
+		to(rgba(24, 163, 168, 1)));
+	background: -webkit-linear-gradient(rgba(27, 188, 194, 1) 0%,
+		rgba(24, 163, 168, 1) 100%);
+	background: -moz-linear-gradient(rgba(27, 188, 194, 1) 0%,
+		rgba(24, 163, 168, 1) 100%);
+	background: -o-linear-gradient(rgba(27, 188, 194, 1) 0%,
+		rgba(24, 163, 168, 1) 100%);
+	background: linear-gradient(rgba(27, 188, 194, 1) 0%,
+		rgba(24, 163, 168, 1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1bbcc2',
+		endColorstr='#18a3a8', GradientType=0);
+}
+
+.btn-gradient.orange {
+	background: rgba(255, 105, 30, 1);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255, 105, 30, 1)),
+		to(rgba(230, 95, 28, 1)));
+	background: -webkit-linear-gradient(rgba(255, 105, 30, 1) 0%,
+		rgba(230, 95, 28, 1) 100%);
+	background: -moz-linear-gradient(rgba(255, 105, 30, 1) 0%,
+		rgba(230, 95, 28, 1) 100%);
+	background: -o-linear-gradient(rgba(255, 105, 30, 1) 0%,
+		rgba(230, 95, 28, 1) 100%);
+	background: linear-gradient(rgba(255, 105, 30, 1) 0%,
+		rgba(230, 95, 28, 1) 100%);
+}
+
+.btn-gradient.cyan:active {
+	background: #169499;
+}
+
+.btn-gradient.orange:active {
+	background: #E8601B;
+}
+
+.btn-gradient:hover {
+	cursor: pointer;
+}
+
+.btn-gradient:disabled {
+	opacity: 0.3;
+	pointer-events: none;
+}
+
+.btn-group {
+	max-width: 85px;
+	width: 100%;
+	height: 100%;
+}
+
+.btn-group button {
+	width: calc(100% - 10px);
+	height: calc(50% - 10px);
+}
+
+.wrap-share {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.wrap-share-item {
+	display: flex;
+	align-items: center;
+}
+
+.wrap-share-item #post.create:after {
+	content: '공유작성';
+}
+
+
+.wrap-share-item #share-list.first:after {
+	content: '코르벳목록조회';
+}
+
+.wrap-share-item #share-list.more:after {
+	content: '목록추가조회';
+	animation-name: textSizeChange;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+.wrap-share-item button {
+	height: 40px;
+	min-width: 130px;
+}
+
+.wrap-share-item span {
+	font-size: 1.2rem;
+}
+
+.wrap-share-item select {
+	box-sizing: border-box;
+	min-width: 200px;
+	padding: 4px;
+	margin: 5px;
+	font-size: 1.2rem;
+	border-radius: 6px;
+}
+
+.wrap-share-item option {
+	padding: 4px;
+	font-size: 1.2rem;
+	color: #fff;
+	background: #272822;
+}
+
+#content-page .beforeArea, #content-page .afterArea {
+	border: 1px solid #ddd;
+	padding: 15px;
+}
+
+#content-page .notice {
+	overflow: auto;
+	word-break: break-all;
+}
+
+#content-page .notice * {
+	font-size: 1.3rem;
+}
+
+#content-page .notice .highlight {
+	color: #ff7e0f;
+	font-weight: 800;
+}
+
+#content-page .beforeArea {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	min-height: 150px;
+}
+
+#content-page .beforeArea .notice {
+	width: calc(100% - 85px);
+	height: 100%;
+}
+
+#content-page .afterArea {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 15px;
+	width: 100%;
+	height: 100%;
+	min-height: fit-content;
+}
+
+#content-page .afterArea .notice {
+	width: 100%;
+	min-height: 90px;
+}
+
+#content-page .listArea {
+	margin-top: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	min-height: 200px;
+}
+
+#content-page .list {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	border: 1px solid #ddd;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+#content-page .list .wrap-card-list {
+	position: relative;
+	height: 100%;
+	overflow-y: auto;
+}
+
+#content-page .list .wrap-card-list .none-content {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#content-page .list .wrap-card-list .none-content span {
+	font-size: 1.7rem;
+	color: #b3c1c5;
+}
+
+#content-page .list .card-list {
+	position: absolute;
+	width: 100%;
+}
+
+#content-page .list .card-list .card {
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin: 10px;
+	cursor: pointer;
+	display: inline-block;
+}
+
+#content-page .list .card-list .card.selected {
+	box-shadow: 0 0 0 3px #44bacd inset;
+}
+
+#content-page .list .card-list .card img {
+	max-width: 170px;
+	display: block;
+}
+
+#content-page .list .card-list .card span {
+	display: inline-block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 170px;
+	font-size: 1.2rem;
+}
+
+#content-page .list .card-detail {
+	border-bottom: 1px solid #ddd;
+	padding: 10px;
+	min-height: 270px;
+	display: table;
+}
+
+#content-page .list .card-detail .title {
+	border: 1px solid #ddd;
+	height: 30px;
+	width: 50%;
+	font-size: 1.2rem;
+	padding: 0 10px;
+}
+
+#content-page .list .card-detail .row {
+	padding: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#content-page .list .card-detail .wrap-file {
+	display: none;
+}
+
+#content-page .list .card-detail .wrap-file span {
+	font-size: 1.2rem;
+}
+
+#content-page .list .card-detail .wrap-file .file::file-selector-button
+	{
+	width: 70px;
+	height: 30px;
+	background: #80f193;
+	border: 1px solid #ddd;
+	border-radius: 7px;
+	cursor: pointer;
+}
+
+#content-page .list .card-detail textarea {
+	border: 1px solid #ddd;
+	height: 50px;
+	width: 100%;
+	font-size: 1.2rem;
+	resize: none;
+	padding: 5px 10px;
+}
+
+#content-page .list .card-detail .images {
+	display: contents;
+}
+
+#content-page .list .card-detail a {
+	cursor: zoom-in;
+}
+
+#content-page .list .card-detail .images img {
+	max-width: 240px;
+}
+
+@keyframes textSizeChange {
+	0% { font-size: 1.2rem; }
+	20% { font-size: 1.3rem; }
+	40% { font-size: 1.4rem; }
+	60% { font-size: 1.5rem; }
+	80% { font-size: 1.6rem; }
+	100% { font-size: 1.7rem; }
+}

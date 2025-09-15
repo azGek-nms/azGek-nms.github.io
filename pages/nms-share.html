@@ -1,0 +1,80 @@
+<div class="beforeArea">
+	<div class="notice">
+		<p>
+			* <span class="highlight">클립보드 권한</span> 관련 경고창이 뜨면 <span
+				class="highlight">'허용'</span>을 클릭해 주세요.
+		</p>
+		<p>
+			* 처음 사용이시면 메인 페이지의 <span class="highlight">세이브 에디터 가이드</span>를 확인하세요.
+		</p>
+		<p>
+			* 세이브에디터 사용전에 반드시 <span class="highlight">세이브 디렉토리를 백업</span>하세요.
+		</p>
+		<p>* BaseContext JSON 값 전체를 복사한 후 붙여넣기 버튼을 클릭하세요.</p>
+		<p>* 붙여넣기 오류가 발생한 경우 데이터가 많아 아직 복사가 완료되지 않았을 수 있으니 잠시 기다리신 후 다시
+			붙여넣기 해 주세요.</p>
+		<p>* 플레이 데이터가 많을경우 복사한 값이 매우 많아 브라우저가 다운될 수 있습니다. 브라우저나 탭을 여러개
+			실행하지 마시고 진행해 주세요.</p>
+	</div>
+	<div class="btn-group">
+		<button class="parse btn-gradient cyan mini">붙여널기</button>
+		<button class="reset btn-gradient orange mini">리셋</button>
+	</div>
+</div>
+
+<div class="afterArea">
+	<div class="notice">
+		<p>* 나의 대상 코르벳을 선택하세요. 유저가 코르벳에 이름을 부여하지 않고 자동생성(seed) 이름을 사용하는 경우 {Default Name}이 표시됩니다.</p>
+		<p>* 선택한 코르벳의 외형을 공유하고 싶으면 공유작성을 클릭하고 공유내용과 스크린샷을 올린후 공유업로드 버튼을 누르면됩니다.</p>
+		<p>* 코르벳 공유 목록을 조회하고 선택한 후 외형적용을 클릭하세요. 복사하기 버튼을 클릭하고 원래의 BaseContext 전체에 덮어쓰고 저장하세요.</p>
+		<p>* 게임 실행 후 문제가 발생할 경우 백업 파일로 세이브 디렉토리를 덮어쓰기 하세요.</p>
+	</div>
+	<div></div>
+	<div class="wrap-share">
+		<div class="wrap-share-item">
+			<span>나의 대상 코르벳 선택</span> <select id="userCorvetteList">
+				<option value="" selected>--- 선택 ---</option>
+			</select>
+			<button id="post" class="create btn-gradient orange mini" disabled></button>
+			<button class="apply btn-gradient cyan mini" disabled>외형적용</button>
+		</div>
+		<div class="wrap-share-item">
+			<button id="share-list" class="first btn-gradient cyan mini"></button>
+		</div>
+	</div>
+	<div class="listArea">
+		<div class="list">
+			<div id="post-detail" class="card-detail">
+				<div class="row">
+					<input id="title" class="title" type="text" placeholder="이름(제목)을 입력하세요." disabled />
+					<div class="wrap-file">
+						<span>이미지파일(최소1개, 최대3개)</span> <input id="file" class="file"
+							type="file" multiple disabled />
+					</div>
+				</div>
+				<div class="row">
+					<textarea id="description" placeholder="설명을 입력하세요." disabled></textarea>
+				</div>
+				<div class="row">
+					<div class="images"></div>
+				</div>
+			</div>
+			<div class="wrap-card-list">
+				<div class="none-content">
+					<span>코르벳 목록을 조회하세요.</span>
+				</div>
+				<div id="post-list" class="card-list"></div>
+			</div>
+		</div>
+		<div class="btn-group">
+			<button class="generate btn-gradient orange mini" disabled>생성</button>
+			<button class="copy btn-gradient cyan mini" disabled>복사하기</button>
+		</div>
+	</div>
+</div>
+
+<link href="./css/magnific-popup.css" rel="stylesheet">
+<link href="./css/nms-share.css" rel="stylesheet">
+<script src="https://apis.google.com/js/api.js"></script>
+<script src="./js/jquery.magnific-popup.min.js"></script>
+<script src="./js/nms-share.js"></script>
