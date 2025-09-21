@@ -14,39 +14,45 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>azGek - No Man's Sky</title>
-	<meta name="Keywords" content="No Man's Sky, editor, editor helper, corvette, appearance data, share, 노맨즈스카이, 에디터, 코르벳, 콜벳, 외형 공유">
-	<meta name="Description" content="Corvette appearance data sharing. and easily change the order of your No Man's Sky bases/starships/multi-tools/companions.(requires the Save Editor, but the UI does JSON modifications automatically). 노맨즈스카이 코르벳 외형을 공유하고 기지/함선/멀티툴/반려동물 순서를 쉽게 변경하세요(세이브 에디터가 필요하지만 UI를 통해 JSON을 자동 수정함).">
+	<meta name="Keywords" content="No Man's Sky, editor, editor helper, corvette, appearance data, design, share, 노맨즈스카이, 에디터, 코르벳, 콜벳, 디자인 공유">
+	<meta name="Description" content="Corvette design data sharing. and easily change the order of your No Man's Sky bases/starships/multi-tools/companions.(requires the Save Editor, but the UI does JSON modifications automatically). 노맨즈스카이 코르벳 디자인을 공유하고 기지/함선/멀티툴/반려동물 순서를 쉽게 변경하세요(세이브 에디터가 필요하지만 UI를 통해 JSON을 자동 수정함).">
 	<meta name="author" content="azGek">
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 	<link href="./css/jquery-ui-1.14.1.min.css" rel="stylesheet">
 	<link href="./css/main.css" rel="stylesheet">
+	
 	<script src="./js/jquery-3.7.1.min.js"></script>
 	<script src="./js/jquery-ui-1.14.1.min.js"></script>
-	<script src="./js/main.js?v=20250920"></script>
+	<script src="./js/main.js"></script>
 </head>
 
 <body>
-
 	<header>
 		<div class="logo">
-			<img src="./images/azGek-pages-logo.png" style="width: auto; height: 100%;">
+			<img src="./images/azGek-pages-logo.png" style="width:auto;height:100%;">
 		</div>
 		<nav class="menu">
-			<a href="#" class="page" data-id="release-note" data-title="Release Note">RELEASE-NOTE</a>
-			<a href="#" class="page" data-id="about" data-title="About">ABOUT</a>
+			<a href="#" class="page" data-id="release-note" data-title="Release Note" data-map="RELEASE-NOTE">RELEASE-NOTE</a>
+			<a href="#" class="page" data-id="about" data-title="About" data-map="ABOUT">ABOUT</a>
+			<div class="translate">
+				<select id="langSelect">
+					<option value="ko">한국어</option>
+					<option value="en">English</option>
+				</select>
+			</div>
 		</nav>
 	</header>
 
 	<main class="container">
-
 		<div id="content-page" class="dialog">
 			<div class="tb">
 				<div class="inner">
 					<div class="top">
-						<div><h2 class="title"></h2></div>
-						<h2 class="close">✖</h2>
+						<div><h2 class="title" data-map=""></h2></div>
+						<h2 class="close" data-map="닫기">✖</h2>
 					</div>
 					<div class="ct"></div>
 				</div>
@@ -55,92 +61,87 @@
 
 		<div id="loading" class="loading-wrap">
 			<div class="loading">
-				<span></span>
-				<span></span>
-				<span></span>
+				<span></span><span></span><span></span>
 			</div>
 		</div>
 
 		<section id="contents" class="section content-section">
+
+			<!-- 세이브 에디터 -->
 			<div class="page card" data-id="save-editor" data-title="세이브 에디터 가이드">
-				<h2>세이브 에디터 가이드</h2>
+				<h2 data-map="세이브 에디터 가이드">세이브 에디터 가이드</h2>
 				<div class="descript">
-					<p>세이브 에디터 다운로드</p>
-					<p>Raw JSON 접근 및 헬퍼에 사용법</p>
-					<p>결과 저장 방법</p>
+					<p data-map="세이브 에디터 다운로드">세이브 에디터 다운로드</p>
+					<p data-map="Raw JSON 접근 및 헬퍼에 사용법">Raw JSON 접근 및 헬퍼에 사용법</p>
+					<p data-map="결과 저장 방법">결과 저장 방법</p>
 				</div>
-				<div class="detail">
-					<img src="./images/nms-save-editor.png">
-				</div>
+				<div class="detail"><img src="./images/nms-save-editor.png"></div>
 			</div>
 
+			<!-- 기지 -->
 			<div class="page card" data-id="nms-sort" data-val="base" data-title="기지 순서 변경 헬퍼">
-				<h2>기지 순서 변경 헬퍼</h2>
+				<h2 data-map="기지 순서 변경 헬퍼">기지 순서 변경 헬퍼</h2>
 				<div class="descript">
-					<p>세이브 에디터 필수</p>
-					<p>UI를 통해 기지 순서를 변경</p>
-					<p>자동 JSON 결과 생성</p>
+					<p data-map="세이브 에디터 필수">세이브 에디터 필수</p>
+					<p data-map="UI를 통해 기지 순서를 변경">UI를 통해 기지 순서를 변경</p>
+					<p data-map="자동 JSON 결과 생성">자동 JSON 결과 생성</p>
 				</div>
-				<div class="detail">
-					<img src="./images/nms-base.png">
-				</div>
+				<div class="detail"><img src="./images/nms-base.png"></div>
 			</div>
 
+			<!-- 함선 -->
 			<div class="page card" data-id="nms-sort" data-val="ship" data-title="함선 순서 변경 헬퍼">
-				<h2>함선 순서 변경 헬퍼</h2>
+				<h2 data-map="함선 순서 변경 헬퍼">함선 순서 변경 헬퍼</h2>
 				<div class="descript">
-					<p>세이브 에디터 필수</p>
-					<p>UI를 통해 함선 순서를 변경</p>
-					<p>자동 JSON 결과 생성</p>
-					<p>코르벳, 철제 독수리, 커스텀 함선 등 외형 그대로 순서 변경 가능</p>
+					<p data-map="세이브 에디터 필수">세이브 에디터 필수</p>
+					<p data-map="UI를 통해 함선 순서를 변경">UI를 통해 함선 순서를 변경</p>
+					<p data-map="자동 JSON 결과 생성">자동 JSON 결과 생성</p>
+					<p data-map="코르벳, 철제 독수리, 커스텀 함선 등 외형 그대로 순서 변경 가능">코르벳, 철제 독수리, 커스텀 함선 등 외형 그대로 순서 변경 가능</p>
 				</div>
-				<div class="detail">
-					<img src="./images/nms-starship.png">
-				</div>
+				<div class="detail"><img src="./images/nms-starship.png"></div>
 			</div>
 
+			<!-- 멀티툴 -->
 			<div class="page card" data-id="nms-sort" data-val="multitool" data-title="멀티툴 순서 변경 헬퍼">
-				<h2>멀티툴 순서 변경 헬퍼</h2>
+				<h2 data-map="멀티툴 순서 변경 헬퍼">멀티툴 순서 변경 헬퍼</h2>
 				<div class="descript">
-					<p>세이브 에디터 필수</p>
-					<p>UI를 통해 멀티툴 순서를 변경</p>
-					<p>자동 JSON 결과 생성</p>
+					<p data-map="세이브 에디터 필수">세이브 에디터 필수</p>
+					<p data-map="UI를 통해 멀티툴 순서를 변경">UI를 통해 멀티툴 순서를 변경</p>
+					<p data-map="자동 JSON 결과 생성">자동 JSON 결과 생성</p>
 				</div>
-				<div class="detail">
-					<img src="./images/nms-multitool.png">
-				</div>
+				<div class="detail"><img src="./images/nms-multitool.png"></div>
 			</div>
 
+			<!-- 반려동물 -->
 			<div class="page card" data-id="nms-sort" data-val="pet" data-title="반려동물 순서 변경 헬퍼">
-				<h2>반려동물 순서 변경 헬퍼</h2>
+				<h2 data-map="반려동물 순서 변경 헬퍼">반려동물 순서 변경 헬퍼</h2>
 				<div class="descript">
-					<p>세이브 에디터 필수</p>
-					<p>UI를 통해 반려동물 순서를 변경</p>
-					<p>자동 JSON 결과 생성</p>
+					<p data-map="세이브 에디터 필수">세이브 에디터 필수</p>
+					<p data-map="UI를 통해 반려동물 순서를 변경">UI를 통해 반려동물 순서를 변경</p>
+					<p data-map="자동 JSON 결과 생성">자동 JSON 결과 생성</p>
 				</div>
-				<div class="detail">
-					<img src="./images/nms-pet.png">
-				</div>
+				<div class="detail"><img src="./images/nms-pet.png"></div>
 			</div>
 
-			<div class="page card" data-id="nms-share" data-val="corvette" data-title="코르벳 외형 공유/적용 헬퍼">
-				<h2>코르벳 외형 공유/적용 헬퍼</h2>
+			<!-- 코르벳 -->
+			<div class="page card" data-id="nms-share" data-val="corvette" data-title="코르벳 디자인 공유/적용 헬퍼">
+				<h2 data-map="코르벳 디자인 공유/적용 헬퍼">코르벳 디자인 공유/적용 헬퍼</h2>
 				<div class="descript">
-					<p>세이브 에디터 필수</p>
-					<p>공유된 코르벳 목록 조회</p>
-					<p>UI를 통해 코르벳 외형 공유/적용</p>
-					<p>자동 JSON 결과 생성</p>
+					<p data-map="세이브 에디터 필수">세이브 에디터 필수</p>
+					<p data-map="공유된 코르벳 목록 조회">공유된 코르벳 목록 조회</p>
+					<p data-map="UI를 통해 코르벳 디자인 공유/적용">UI를 통해 코르벳 디자인 공유/적용</p>
+					<p data-map="자동 JSON 결과 생성">자동 JSON 결과 생성</p>
 				</div>
-				<div class="detail">
-					<img src="./images/nms-corvette.png">
-				</div>
+				<div class="detail"><img src="./images/nms-corvette.png"></div>
 			</div>
+
 		</section>
 
+		<!-- 유튜브 섹션 -->
 		<section id="yt-channel" class="section info-section">
 			<img src="./images/nms-icon-250x357.png" class="icon">
-			<h2>아즈겍(azGek)의 유튜브 채널</h2>
-			<p>노맨즈스카이(No Man's Sky) 관련 영상을 업로드 예정입니다.</p>
+			<h2 data-map="아즈겍(azGek)의 유튜브 채널">아즈겍(azGek)의 유튜브 채널</h2>
+			<p data-map="노맨즈스카이(No Man's Sky) 관련 영상을 업로드 예정입니다.">노맨즈스카이(No Man's Sky) 관련 영상을 업로드 예정입니다.</p>
 			<div class="detail" style="max-width: 430px;">
 				<img src="./images/azgek-youtube.jpg" class="link" data-val="https://www.youtube.com/@%EC%95%84%EC%A6%88%EA%B2%8D">
 			</div>
@@ -148,9 +149,8 @@
 
 		<section class="section info-section">
 			<img src="./images/nms-icon-250x357.png" class="icon">
-			<h2>노맨즈스카이 모드 관련 가이드 재생목록</h2>
-			<p>노맨즈스카이 모드 적용 및 관리, 모드 충돌, 모드 병합 등의 가이드 재생목록입니다.</p>
-
+			<h2 data-map="노맨즈스카이 모드 관련 가이드 재생목록">노맨즈스카이 모드 관련 가이드 재생목록</h2>
+			<p data-map="노맨즈스카이 모드 적용 및 관리, 모드 충돌, 모드 병합 등의 가이드 재생목록입니다.">노맨즈스카이 모드 적용 및 관리, 모드 충돌, 모드 병합 등의 가이드 재생목록입니다.</p>
 			<div class="detail">
 				<div class="yt-wrapper">
 					<iframe src="https://www.youtube.com/embed/videoseries?si=SRbH3FxJKT9LB81p&amp;list=PLlwWdOr7rtYoqbu7jQhZOWJTqoSdEEw8u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -160,9 +160,8 @@
 
 		<section class="section info-section">
 			<img src="./images/nms-icon-250x357.png" class="icon">
-			<h2>노맨즈스카이 추천 모드 재생목록</h2>
-			<p>노맨즈스카이 추천 모드 재생목록입니다.</p>
-
+			<h2 data-map="노맨즈스카이 추천 모드 재생목록">노맨즈스카이 추천 모드 재생목록</h2>
+			<p data-map="노맨즈스카이 추천 모드 재생목록입니다.">노맨즈스카이 추천 모드 재생목록입니다.</p>
 			<div class="detail">
 				<div class="yt-wrapper">
 					<iframe src="https://www.youtube.com/embed/videoseries?si=LJdsrsn-9uLNxgVD&amp;list=PLlwWdOr7rtYrzrNFUu0WEID2HyP_Ayley" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -172,9 +171,8 @@
 
 		<section class="section info-section">
 			<img src="./images/nms-icon-250x357.png" class="icon">
-			<h2>노맨즈스카이 영상 재생목록</h2>
-			<p>노맨즈스카이에 대한 여러 가지 영상 재생목록입니다.</p>
-
+			<h2 data-map="노맨즈스카이 영상 재생목록">노맨즈스카이 영상 재생목록</h2>
+			<p data-map="노맨즈스카이에 대한 여러 가지 영상 재생목록입니다.">노맨즈스카이에 대한 여러 가지 영상 재생목록입니다.</p>
 			<div class="detail">
 				<div class="yt-wrapper">
 					<iframe src="https://www.youtube.com/embed/videoseries?si=CpJpIJxBtHlkDKIp&amp;list=PLlwWdOr7rtYrvgrNgw51ggQ_kGopvbFzN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -183,7 +181,5 @@
 		</section>
 
 	</main>
-
 </body>
-
 </html>
